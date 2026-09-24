@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameZone | عالم الألعاب</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home"><span class="brand-icon">🎮</span> Game<span>Zone</span></a>
+    <nav>
+      <a class="active" href="#home">الرئيسية</a>
+      <a href="#games">الألعاب</a>
+      <a href="#store">المتجر</a>
+      <a href="#community">المجتمع</a>
+      <a href="#about">حولنا</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="بحث">⌕</button>
+      <button class="icon-btn" aria-label="الحساب">♙</button>
+      <button class="login" onclick="showToast('سيتم فتح صفحة تسجيل الدخول قريبًا')">تسجيل الدخول</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="eyebrow">🎮 منصة اللاعبين الأولى</p>
+        <h1>PLAY<br><span>YOUR WORLD</span></h1>
+        <p class="subtitle">اكتشف أفضل الألعاب، وكن جزءًا من مجتمع اللاعبين.</p>
+        <div class="hero-buttons">
+          <a class="primary" href="#games">ابدأ الآن <span>←</span></a>
+          <a class="secondary" href="#games">استكشف الألعاب</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <article><div class="feature-icon">🎮</div><h3>أحدث الألعاب</h3><p>اكتشف ألعابًا جديدة باستمرار</p></article>
+      <article><div class="feature-icon">👥</div><h3>مجتمع اللاعبين</h3><p>تواصل وشارك مع اللاعبين</p></article>
+      <article><div class="feature-icon">🛡️</div><h3>آمان وموثوقية</h3><p>تجربة لعب آمنة وموثوقة</p></article>
+      <article><div class="feature-icon">⚡</div><h3>تحديثات مستمرة</h3><p>محتوى جديد دائمًا</p></article>
+    </section>
+
+    <section class="section" id="games">
+      <div class="section-head"><div><p class="eyebrow">اختياراتنا</p><h2>ألعاب تستحق التجربة</h2></div><button class="filter" onclick="showToast('سيتم إضافة الفلاتر قريبًا')">كل الألعاب ▾</button></div>
+      <div class="games-grid">
+        <article class="game-card"><div class="game-art art1"><span>⚔️</span></div><div class="card-body"><h3>Shadow Realm</h3><p>مغامرة • أكشن</p><button onclick="playGame('Shadow Realm')">▶ ابدأ اللعب</button></div></article>
+        <article class="game-card"><div class="game-art art2"><span>🚀</span></div><div class="card-body"><h3>Neon Drift</h3><p>سباقات • أركيد</p><button onclick="playGame('Neon Drift')">▶ ابدأ اللعب</button></div></article>
+        <article class="game-card"><div class="game-art art3"><span>🧙</span></div><div class="card-body"><h3>Legends Quest</h3><p>RPG • خيال</p><button onclick="playGame('Legends Quest')">▶ ابدأ اللعب</button></div></article>
+      </div>
+    </section>
+
+    <section class="community" id="community">
+      <div><p class="eyebrow">مجتمع GameZone</p><h2>اللعب أحلى مع أصحابك.</h2><p>كوّن فريقك، شارك إنجازاتك، واكتشف لاعبين يشاركونك نفس الألعاب.</p></div>
+      <button class="primary" onclick="showToast('أهلاً بك في مجتمع GameZone!')">انضم للمجتمع ←</button>
+    </section>
+
+    <section class="section about" id="about"><p class="eyebrow">GameZone</p><h2>كل عالم الألعاب في مكان واحد</h2><p>واجهة تجريبية لموقع ألعاب حديث، ويمكن تطويرها لاحقًا لتشمل حسابات، متجرًا حقيقيًا، نظام تقييم، صفحات ألعاب، وقاعدة بيانات.</p></section>
+  </main>
+
+  <footer id="store"><span>© 2026 GameZone</span><span>صُمم لعشاق الألعاب 🎮</span></footer>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
